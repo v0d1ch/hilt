@@ -1,3 +1,4 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Main where
 
 import           Data.Monoid        ((<>))
@@ -18,6 +19,6 @@ main = Hilt.manage $ do
     Channel.worker chan (\text -> Logger.debug logger ("Received message: " <> text))
 
     Channel.write chan "Hello world!"
+    Channel.write chan "Hello Croatia!"
 
-    -- Or pass services off to some other areas of your app
-    -- someMoreLogic logger chan
+
